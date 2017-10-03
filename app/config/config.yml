@@ -68,3 +68,8 @@ fos_rest:
 sylius_theme:
     sources:
         filesystem: ~
+
+sylius_mailer:
+    sender:
+        name: All IP Camera Support
+        address: support@allipcamera.com
