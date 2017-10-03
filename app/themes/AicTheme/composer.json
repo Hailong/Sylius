@@ -1,0 +1,14 @@
+{
+    "name": "aic/aic-theme",
+    "authors": [
+        {
+            "name": "Hailong Zhao",
+            "email": "hailongzh@hotmail.com"
+        }
+    ],
+    "extra": {
+        "sylius-theme": {
+            "title": "Aic Theme"
+        }
+    }
+}
