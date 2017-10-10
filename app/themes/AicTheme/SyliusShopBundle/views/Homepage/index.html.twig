@@ -1,0 +1,24 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block content %}
+<div class="ui center aligned segment">
+  <div class="ui active text container">
+    <h1 class="ui header">
+      Find the IP Camera Right for You
+    </h1>
+    <p>
+      IP Camera is becoming more and more popular, and our goal is to help you spend the money wisely, find the right IP Camera for your needs, and with the best price of course!
+    </p>
+    <p>
+      <em>
+        (Our website is under construction at this point, will complete the products catalog soon. Feel free to leave us a message if you have any comments!)
+      </em>
+    </p>
+    <a class="ui primary basic button" href="{{ path('sylius_shop_contact_request') }}">{{ 'sylius.ui.contact_us'|trans  }}</a>
+  </div>
+</div>
+<h2 class="ui horizontal section divider header">
+    {{ 'sylius.ui.latest_products'|trans }}
+</h2>
+{{ render(url('sylius_shop_partial_product_index_latest', {'count': 4, 'template': '@SyliusShop/Product/_horizontalList.html.twig'})) }}
+{% endblock %}

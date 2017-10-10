@@ -41,7 +41,7 @@
 @relativeBorderRadius: @relative4px;
 @absoluteBorderRadius: @4px;
 
-@defaultBorderRadius: @absoluteBorderRadius;
+@defaultBorderRadius: 0;
 
 /*-------------------
     Brand Colors
@@ -227,7 +227,7 @@
 @pink             : #E03997;
 @brown            : #A5673F;
 @grey             : #767676;
-@black            : #1B1C1D;
+@black            : #3282FF;
 
 /*---  Light Colors  ---*/
 @lightRed         : #FF695E;
