@@ -18,6 +18,12 @@
             "homepage": "http://github.com/Sylius/Sylius/contributors"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Hailong/sitemap-plugin"
+        }
+    ],
     "require": {
         "php": "^7.1",
 
@@ -67,7 +73,7 @@
         "zendframework/zend-hydrator": "^2.2",
         "zendframework/zend-stdlib": "^3.1",
         "ramsey/uuid": "^3.7",
-        "stefandoorn/sitemap-plugin": "^1.0"
+        "stefandoorn/sitemap-plugin": "dev-aic"
     },
     "require-dev": {
         "akeneo/phpspec-skip-example-extension": "^3.0",
