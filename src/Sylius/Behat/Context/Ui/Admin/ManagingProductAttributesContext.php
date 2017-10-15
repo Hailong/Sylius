@@ -120,6 +120,14 @@ final class ManagingProductAttributesContext implements Context
     }
 
     /**
+     * @When I delete value :value
+     */
+    public function iDeleteValue(string $value): void
+    {
+        $this->updatePage->deleteAttributeValue($value);
+    }
+
+    /**
      * @When I change its value :oldValue to :newValue
      */
     public function iChangeItsValueTo(string $oldValue, string $newValue): void
@@ -256,7 +264,7 @@ final class ManagingProductAttributesContext implements Context
     /**
      * @When /^(the administrator) changes (this product attribute)'s value "([^"]*)" to "([^"]*)"$/
      */
-    public function theAdministratorChangesTheValueTo(
+    public function theAdministratorChangesThisProductAttributesValueTo(
         AdminUserInterface $user,
         ProductAttributeInterface $productAttribute,
         string $oldValue,
@@ -267,6 +275,58 @@ final class ManagingProductAttributesContext implements Context
             function () use ($productAttribute, $oldValue, $newValue) {
                 $this->iWantToEditThisAttribute($productAttribute);
                 $this->iChangeItsValueTo($oldValue, $newValue);
+                $this->iSaveMyChanges();
+            }
+        );
+    }
+
+    /**
+     * @When I specify its min length as :min
+     * @When I specify its min entries value as :min
+     */
+    public function iSpecifyItsMinValueAs(int $min): void
+    {
+        $this->createPage->specifyMinValue($min);
+    }
+
+    /**
+     * @When I specify its max length as :max
+     * @When I specify its max entries value as :max
+     */
+    public function iSpecifyItsMaxLengthAs(int $max): void
+    {
+        $this->createPage->specifyMaxValue($max);
+    }
+
+    /**
+     * @When I check multiple option
+     */
+    public function iCheckMultipleOption(): void
+    {
+        $this->createPage->checkMultiple();
+    }
+
+    /**
+     * @When I do not check multiple option
+     */
+    public function iDoNotCheckMultipleOption(): void
+    {
+        // Intentionally left blank to fulfill context expectation
+    }
+
+    /**
+     * @When /^(the administrator) deletes the value "([^"]+)" from (this product attribute)$/
+     */
+    public function theAdministratorDeletesTheValueFromThisProductAttribute(
+        AdminUserInterface $user,
+        string $value,
+        ProductAttributeInterface $productAttribute
+    ): void {
+        $this->sharedSecurityService->performActionAsAdminUser(
+            $user,
+            function () use ($productAttribute, $value) {
+                $this->iWantToEditThisAttribute($productAttribute);
+                $this->iDeleteValue($value);
                 $this->iSaveMyChanges();
             }
         );
@@ -328,14 +388,79 @@ final class ManagingProductAttributesContext implements Context
     }
 
     /**
+     * @Then I should be notified that max length must be greater or equal to the min length
+     */
+    public function iShouldBeNotifiedThatMaxLengthMustBeGreaterOrEqualToTheMinLength(): void
+    {
+        $this->assertValidationMessage(
+            'Configuration max length must be greater or equal to the min length.'
+        );
+    }
+
+    /**
+     * @Then I should be notified that max entries value must be greater or equal to the min entries value
+     */
+    public function iShouldBeNotifiedThatMaxEntriesValueMustBeGreaterOrEqualToTheMinEntriesValue(): void
+    {
+        $this->assertValidationMessage(
+            'Configuration max entries value must be greater or equal to the min entries value.'
+        );
+    }
+
+    /**
+     * @Then I should be notified that min entries value must be lower or equal to the number of added choices
+     */
+    public function iShouldBeNotifiedThatMinEntriesValueMustBeLowerOrEqualToTheNumberOfAddedChoices(): void
+    {
+        $this->assertValidationMessage(
+            'Configuration min entries value must be lower or equal to the number of added choices.'
+        );
+    }
+
+    /**
+     * @Then I should be notified that multiple must be true if min or max entries values are specified
+     */
+    public function iShouldBeNotifiedThatMultipleMustBeTrueIfMinOrMaxEntriesValuesAreSpecified(): void
+    {
+        $this->assertValidationMessage(
+            'Configuration multiple must be true if min or max entries values are specified.'
+        );
+    }
+
+    /**
+     * @Then /^(this product attribute) should not have value "([^"]*)"/
+     */
+    public function theSelectAttributeShouldNotHaveValue(ProductAttributeInterface $productAttribute, string $value): void
+    {
+        $this->iWantToEditThisAttribute($productAttribute);
+
+        Assert::false($this->updatePage->hasAttributeValue($value));
+    }
+
+    /**
      * @param string $element
      * @param string $expectedMessage
+     *
+     * @throws \InvalidArgumentException
      */
-    private function assertFieldValidationMessage($element, $expectedMessage)
+    private function assertFieldValidationMessage(string $element, string $expectedMessage): void
     {
         /** @var CreatePageInterface|UpdatePageInterface $currentPage */
         $currentPage = $this->currentPageResolver->getCurrentPageWithForm([$this->createPage, $this->updatePage]);
 
         Assert::same($currentPage->getValidationMessage($element), $expectedMessage);
+    }
+
+    /**
+     * @param string $expectedMessage
+     *
+     * @throws \InvalidArgumentException
+     */
+    private function assertValidationMessage(string $expectedMessage): void
+    {
+        /** @var CreatePageInterface|UpdatePageInterface $currentPage */
+        $currentPage = $this->currentPageResolver->getCurrentPageWithForm([$this->createPage, $this->updatePage]);
+
+        Assert::same($currentPage->getValidationErrors(), $expectedMessage);
     }
 }

@@ -6,7 +6,7 @@ sylius:
         login:
             username: 'Benutzername'
             password: 'Passwort'
-            remember_me: 'Eingeloggt bleiben'
+            remember_me: 'Angemeldet bleiben'
         option:
             name: 'Name'
         notes: 'Weitere Hinweise'
@@ -574,7 +574,7 @@ sylius:
         base_currency_order_total: 'Bestellsumme in Basiswährung'
         order_value: 'Bestellwert'
         ordered: 'Bestellt'
-        orders: 'Aufträge'
+        orders: 'Bestellungen'
         orders_statistics: 'Statistik der Bestellungen'
         original_price: 'Ursprünglicher Preis'
         out_of_stock: 'Ausverkauft'
@@ -669,7 +669,7 @@ sylius:
         reject: 'Zurückweisen'
         rejected: 'Zurückgewiesen'
         release_inventory: 'Warenbestand freigeben'
-        remember_me: 'Eingeloggt bleiben'
+        remember_me: 'Angemeldet bleiben'
         remove_attribute: 'Attribute entfernen'
         repeat_new_password: 'Neues Passwort wiederholen'
         report_details: 'Berichtdetails'

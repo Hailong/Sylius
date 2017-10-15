@@ -62,7 +62,7 @@ class UpdatePage extends BaseUpdatePage implements UpdatePageInterface
      */
     public function hasAttributeValue(string $value): bool
     {
-        return null !== $this->getElement('attribute_choice_list_element', ['%value%' => $value]);
+        return $this->hasElement('attribute_choice_list_element', ['%value%' => $value]);
     }
 
     /**
@@ -72,6 +72,15 @@ class UpdatePage extends BaseUpdatePage implements UpdatePageInterface
     {
         $this->getDocument()->clickLink('Add');
         $this->getLastAttributeChoiceElement()->find('css', 'input')->setValue($value);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function deleteAttributeValue(string $value): void
+    {
+        $attributeChoiceElement = $this->getElement('attribute_choice_list_element', ['%value%' => $value])->getParent();
+        $attributeChoiceElement->clickLink('Delete');
     }
 
     /**
