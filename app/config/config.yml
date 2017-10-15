@@ -6,6 +6,7 @@ imports:
     - { resource: "@SyliusAdminBundle/Resources/config/app/config.yml" }
     - { resource: "@SyliusShopBundle/Resources/config/app/config.yml" }
     - { resource: "@SyliusAdminApiBundle/Resources/config/app/config.yml" }
+    - { resource: "@SitemapPlugin/Resources/config/config.yml" }
 
     - { resource: "parameters.yml" }
     - { resource: "security.yml" }
@@ -73,3 +74,13 @@ sylius_mailer:
     sender:
         name: All IP Camera Support
         address: support@allipcamera.com
+
+sitemap:
+    template:             '@SitemapPlugin/show.xml.twig'
+    index_template:       '@SitemapPlugin/index.xml.twig'
+    exclude_taxon_root:   true
+    absolute_url:         true
+    hreflang:             true
+    static_routes:
+        - { route: sylius_shop_homepage, parameters: [], locales: [] }
+        - { route: sylius_shop_contact_request, parameters: [], locales: [] }

@@ -66,7 +66,8 @@
         "winzou/state-machine-bundle": "^0.3",
         "zendframework/zend-hydrator": "^2.2",
         "zendframework/zend-stdlib": "^3.1",
-        "ramsey/uuid": "^3.7"
+        "ramsey/uuid": "^3.7",
+        "stefandoorn/sitemap-plugin": "^1.0"
     },
     "require-dev": {
         "akeneo/phpspec-skip-example-extension": "^3.0",
