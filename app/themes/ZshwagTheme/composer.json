@@ -1,0 +1,14 @@
+{
+    "name": "orinocotech/zshwag-theme",
+    "authors": [
+        {
+            "name": "Hailong Zhao",
+            "email": "hailongzh@hotmail.com"
+        }
+    ],
+    "extra": {
+        "sylius-theme": {
+            "title": "Zshwag Theme"
+        }
+    }
+}
