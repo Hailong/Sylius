@@ -22,7 +22,7 @@ var paths = {
     shop: {
         js: [
             nodeModulesPath + 'jquery/dist/jquery.min.js',
-            nodeModulesPath + 'semantic-ui-css/semantic.min.js',
+            nodeModulesPath + '../semantic/dist/semantic.min.js',
             nodeModulesPath + 'lightbox2/dist/js/lightbox.js',
             vendorUiPath + 'Resources/private/js/**',
             vendorShopPath + 'Resources/private/js/**'
@@ -32,7 +32,7 @@ var paths = {
             vendorShopPath + 'Resources/private/sass/**'
         ],
         css: [
-            nodeModulesPath + 'semantic-ui-css/semantic.min.css',
+            nodeModulesPath + '../semantic/dist/semantic.min.css',
             nodeModulesPath + 'lightbox2/dist/css/lightbox.css',
             vendorUiPath + 'Resources/private/css/**',
             vendorShopPath + 'Resources/private/css/**',
@@ -55,7 +55,7 @@ gulp.task('shop-js', function () {
 });
 
 gulp.task('shop-css', function() {
-    gulp.src([nodeModulesPath + 'semantic-ui-css/themes/**/*']).pipe(gulp.dest(shopRootPath + 'css/themes/'));
+    gulp.src([nodeModulesPath + '../semantic/dist/themes/**/*']).pipe(gulp.dest(shopRootPath + 'css/themes/'));
 
     var cssStream = gulp.src(paths.shop.css)
             .pipe(concat('css-files.css'))
