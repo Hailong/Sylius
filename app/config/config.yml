@@ -47,6 +47,9 @@ doctrine_migrations:
 swiftmailer:
     transport: "%mailer_transport%"
     host: "%mailer_host%"
+    port: "%mailer_port%"
+    encryption: "%mailer_encryption%"
+    auth_mode: "%mailer_auth_mode%"
     username: "%mailer_user%"
     password: "%mailer_password%"
 
@@ -65,3 +68,8 @@ fos_rest:
 sylius_theme:
     sources:
         filesystem: ~
+
+sylius_mailer:
+    sender:
+        name: 专属海外购
+        address: sales@mamaplants.com
