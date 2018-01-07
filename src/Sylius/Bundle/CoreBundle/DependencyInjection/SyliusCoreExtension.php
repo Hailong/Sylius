@@ -90,6 +90,8 @@ final class SyliusCoreExtension extends AbstractResourceExtension implements Pre
      */
     private function prependHwiOauth(ContainerBuilder $container, LoaderInterface $loader): void
     {
+        $loader->load('services/integrations/zshwag_mini_program.xml');
+
         if (!$container->hasExtension('hwi_oauth')) {
             return;
         }

@@ -6,6 +6,7 @@ imports:
     - { resource: "@SyliusAdminBundle/Resources/config/app/config.yml" }
     - { resource: "@SyliusShopBundle/Resources/config/app/config.yml" }
     - { resource: "@SyliusAdminApiBundle/Resources/config/app/config.yml" }
+    - { resource: "@ShopApiPlugin/Resources/config/app/config.yml" }
 
     - { resource: "parameters.yml" }
     - { resource: "security.yml" }
@@ -62,6 +63,7 @@ fos_rest:
         empty_content: 204
     format_listener:
         rules:
+            - { path: '^/shop-api', priorities: ['json'], fallback_format: json, prefer_extension: true }
             - { path: '^/api/.*', priorities: ['json', 'xml'], fallback_format: json, prefer_extension: true }
             - { path: '^/', stop: true }
 
@@ -71,5 +73,15 @@ sylius_theme:
 
 sylius_mailer:
     sender:
-        name: 专属海外购
-        address: sales@mamaplants.com
+        name: "%mailer_sender_name%"
+        address: "%mailer_sender_address%"
+
+sylius_shop:
+    checkout_resolver:
+        pattern: "%sylius.security.shop_regex%/checkout/"
+
+lexik_jwt_authentication:
+    private_key_path: '%jwt_private_key_path%'
+    public_key_path:  '%jwt_public_key_path%'
+    pass_phrase:      '%jwt_key_pass_phrase%'
+    token_ttl:        '%jwt_token_ttl%'

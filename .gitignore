@@ -1,7 +1,7 @@
 .DS_Store
 .vscode/
 
-/.php_cs.cache
+.php_cs.cache
 
 /app/config/parameters.yml
 /app/config/*.local.yml

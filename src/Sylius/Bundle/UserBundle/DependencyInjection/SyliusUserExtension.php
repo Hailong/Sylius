@@ -21,6 +21,7 @@ use Sylius\Bundle\UserBundle\Provider\AbstractUserProvider;
 use Sylius\Bundle\UserBundle\Provider\EmailProvider;
 use Sylius\Bundle\UserBundle\Provider\UsernameOrEmailProvider;
 use Sylius\Bundle\UserBundle\Provider\UsernameProvider;
+use Sylius\Bundle\UserBundle\Provider\MiniProgramProvider;
 use Sylius\Bundle\UserBundle\Reloader\UserReloader;
 use Sylius\Component\User\Security\Checker\TokenUniquenessChecker;
 use Sylius\Component\User\Security\Generator\UniquePinGenerator;
@@ -269,5 +270,13 @@ final class SyliusUserExtension extends AbstractResourceExtension
         $emailOrNameBasedProviderDefinition = new DefinitionDecorator($abstractProviderServiceId);
         $emailOrNameBasedProviderDefinition->setClass(UsernameOrEmailProvider::class);
         $container->setDefinition($providerEmailOrNameBasedServiceId, $emailOrNameBasedProviderDefinition);
+
+        if ($userType == 'mini_program') {
+            $providerMiniProgramBasedServiceId = sprintf('sylius.%s_user_provider.open_id_based', $userType);
+
+            $miniProgramBasedProviderDefinition = new DefinitionDecorator($abstractProviderServiceId);
+            $miniProgramBasedProviderDefinition->setClass(MiniProgramProvider::class);
+            $container->setDefinition($providerMiniProgramBasedServiceId, $miniProgramBasedProviderDefinition);
+        }
     }
 }

@@ -47,5 +47,11 @@
                 <cascade-all />
             </cascade>
         </one-to-many>
+
+        <one-to-one field="miniProgramAccount" target-entity="Sylius\Component\User\Model\UserMiniProgramInterface" mapped-by="user">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-one>
     </mapped-superclass>
 </doctrine-mapping>

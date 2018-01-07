@@ -1,6 +1,13 @@
 # This file is part of the Sylius package.
 # (c) Paweł Jędrzejewski
 
+shop_api_login_check:
+    methods: [POST]
+    path: /shop-api/login_check
+
+sylius_shop_api:
+    resource: "@ShopApiPlugin/Resources/config/routing.yml"
+
 sylius_admin:
     resource: "@SyliusAdminBundle/Resources/config/routing.yml"
     prefix: /admin
@@ -26,3 +33,7 @@ sylius_shop_default_locale:
 
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+zshwag_wechat:
+    resource: "@ZshwagWechatBundle/Resources/config/routing.xml"
+    prefix:   /

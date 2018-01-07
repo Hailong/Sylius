@@ -117,6 +117,11 @@ class User implements UserInterface
     protected $oauthAccounts;
 
     /**
+     * @var UserMiniProgramInterface|null
+     */
+    protected $miniProgramAccount;
+
+    /**
      * @var string|null
      */
     protected $email;
@@ -506,6 +511,22 @@ class User implements UserInterface
             $this->oauthAccounts->add($oauth);
             $oauth->setUser($this);
         }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getMiniProgramAccount(): ?UserMiniProgramInterface
+    {
+        return $this->miniProgramAccount;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setMiniProgramAccount(UserMiniProgramInterface $account): void
+    {
+        $this->miniProgramAccount = $account;
     }
 
     /**

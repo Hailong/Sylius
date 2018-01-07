@@ -26,7 +26,17 @@ class AppKernel extends Kernel
 
             new \FOS\OAuthServerBundle\FOSOAuthServerBundle(), // Required by SyliusAdminApiBundle.
             new \Sylius\Bundle\AdminApiBundle\SyliusAdminApiBundle(),
+
+            new \Sylius\ShopApiPlugin\ShopApiPlugin(),
+            new \League\Tactician\Bundle\TacticianBundle(),
+            new Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
+
+            new Zshwag\Bundle\WechatBundle\ZshwagWechatBundle(),
         ];
+
+        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+        }
 
         return array_merge(parent::registerBundles(), $bundles);
     }

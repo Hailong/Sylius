@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+WeChat Mini-Program user login.
+
+-->
+
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="sylius.mini_program.user_provider" class="Sylius\Bundle\UserBundle\Provider\MiniProgramProvider" lazy="true">
+            <argument type="string" id="%sylius.model.mini_program_user.class%" />
+            <argument type="service" id="sylius.factory.customer" />
+            <argument type="service" id="sylius.factory.shop_user" />
+            <argument type="service" id="sylius.repository.shop_user" />
+            <argument type="service" id="sylius.factory.mini_program_user" />
+            <argument type="service" id="sylius.repository.mini_program_user" />
+            <argument type="service" id="sylius.manager.shop_user" />
+            <argument type="service" id="sylius.canonicalizer" />
+            <argument type="service" id="sylius.repository.customer" />
+        </service>
+    </services>
+</container>

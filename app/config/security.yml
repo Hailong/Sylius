@@ -4,14 +4,19 @@
 parameters:
     sylius.security.admin_regex: "^/admin"
     sylius.security.api_regex: "^/api"
-    sylius.security.shop_regex: "^/(?!admin|api/.*|api$|media/.*)[^/]++"
+    sylius.security.shop_regex: "^/(?!admin|api/.*|api$|media/.*|shop-api)[^/]++"
+    shop_api_anonymous.security.regex: "^/shop-api/(taxons|products-by-slug)"
+    shop_api.security.regex: "^/shop-api"
 
 security:
     providers:
-        sylius_admin_user_provider:
-            id: sylius.admin_user_provider.email_or_name_based
+        # ShopUser provider has to be defined as a first one in order to make JWT and SymfonyAuthorization work
+        sylius_mini_program_user_provider:
+            id: sylius.mini_program.user_provider
         sylius_shop_user_provider:
             id: sylius.shop_user_provider.email_or_name_based
+        sylius_admin_user_provider:
+            id: sylius.admin_user_provider.email_or_name_based
     encoders:
         Sylius\Component\User\Model\UserInterface: sha512
     firewalls:
@@ -50,6 +55,32 @@ security:
             fos_oauth:  true
             stateless:  true
             anonymous:  true
+
+        shop_api_login:
+            pattern:  "%shop_api.security.regex%/login"
+            stateless: true
+            anonymous: true
+            mini_program:
+                provider: sylius_mini_program_user_provider
+                app_id: "%mini_program_appid%"
+                secret: "%mini_program_secret%"
+                login_path: shop_api_login_check
+                check_path: shop_api_login_check
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+                require_previous_session: false
+
+        shop_api_anonymous:
+            pattern: "%shop_api_anonymous.security.regex%"
+            stateless: true
+            anonymous: true
+
+        shop_api:
+            pattern: "%shop_api.security.regex%"
+            stateless:  true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
 
         shop:
             switch_user: { role: ROLE_ALLOWED_TO_SWITCH }
@@ -93,9 +124,11 @@ security:
         - { path: "%sylius.security.admin_regex%/login", role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: "%sylius.security.api_regex%/login", role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: "%sylius.security.shop_regex%/login", role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: "%shop_api.security.regex%/login", role: IS_AUTHENTICATED_ANONYMOUSLY }
 
         - { path: "%sylius.security.shop_regex%/register", role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: "%sylius.security.shop_regex%/verify", role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: "%shop_api.security.regex%/register", role: IS_AUTHENTICATED_ANONYMOUSLY }
 
         - { path: "%sylius.security.admin_regex%", role: ROLE_ADMINISTRATION_ACCESS }
         - { path: "%sylius.security.api_regex%/.*", role: ROLE_API_ACCESS }
