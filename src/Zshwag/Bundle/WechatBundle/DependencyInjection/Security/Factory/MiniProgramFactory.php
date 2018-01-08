@@ -24,7 +24,7 @@ class MiniProgramFactory extends AbstractFactory
 
         $container
             ->setDefinition($providerId, new DefinitionDecorator('security.authentication.provider.mini_program'))
-            ->addArgument(new Reference($userProviderId))
+            ->addArgument(new Reference('sylius.mini_program.user_provider'))
             ->addArgument(new Reference('zshwag.http_client'))
             ->addArgument($config['app_id'])
             ->addArgument($config['secret'])

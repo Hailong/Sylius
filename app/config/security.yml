@@ -11,8 +11,6 @@ parameters:
 security:
     providers:
         # ShopUser provider has to be defined as a first one in order to make JWT and SymfonyAuthorization work
-        sylius_mini_program_user_provider:
-            id: sylius.mini_program.user_provider
         sylius_shop_user_provider:
             id: sylius.shop_user_provider.email_or_name_based
         sylius_admin_user_provider:
@@ -61,7 +59,6 @@ security:
             stateless: true
             anonymous: true
             mini_program:
-                provider: sylius_mini_program_user_provider
                 app_id: "%mini_program_appid%"
                 secret: "%mini_program_secret%"
                 login_path: shop_api_login_check

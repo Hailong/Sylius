@@ -188,7 +188,7 @@ class MiniProgramProvider extends BaseUserProvider
         $wxUser->setUser($user);
 
         /** @var SyliusUserInterface $user */
-        $user->setMiniProgramAccount($wxUser);
+        $user->addMiniProgramAccount($wxUser);
 
         $this->userManager->persist($user);
         $this->userManager->flush();

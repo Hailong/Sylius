@@ -48,10 +48,10 @@
             </cascade>
         </one-to-many>
 
-        <one-to-one field="miniProgramAccount" target-entity="Sylius\Component\User\Model\UserMiniProgramInterface" mapped-by="user">
+        <one-to-many field="miniProgramAccounts" target-entity="Sylius\Component\User\Model\UserMiniProgramInterface" mapped-by="user">
             <cascade>
                 <cascade-all />
             </cascade>
-        </one-to-one>
+        </one-to-many>
     </mapped-superclass>
 </doctrine-mapping>

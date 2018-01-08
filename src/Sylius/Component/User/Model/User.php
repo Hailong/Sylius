@@ -117,9 +117,9 @@ class User implements UserInterface
     protected $oauthAccounts;
 
     /**
-     * @var UserMiniProgramInterface|null
+     * @var Collection|UserMiniProgramInterface[]
      */
-    protected $miniProgramAccount;
+    protected $miniProgramAccounts;
 
     /**
      * @var string|null
@@ -135,6 +135,7 @@ class User implements UserInterface
     {
         $this->salt = base_convert(sha1(uniqid((string) mt_rand(), true)), 16, 36);
         $this->oauthAccounts = new ArrayCollection();
+        $this->miniProgramAccounts = new ArrayCollection();
         $this->createdAt = new \DateTime();
 
         // Set here to overwrite default value from trait
@@ -516,17 +517,20 @@ class User implements UserInterface
     /**
      * {@inheritdoc}
      */
-    public function getMiniProgramAccount(): ?UserMiniProgramInterface
+    public function getMiniProgramAccounts(): Collection
     {
-        return $this->miniProgramAccount;
+        return $this->miniProgramAccounts;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function setMiniProgramAccount(UserMiniProgramInterface $account): void
+    public function addMiniProgramAccount(UserMiniProgramInterface $account): void
     {
-        $this->miniProgramAccount = $account;
+        if (!$this->miniProgramAccounts->contains($account)) {
+            $this->miniProgramAccounts->add($account);
+            $account->setUser($this);
+        }
     }
 
     /**

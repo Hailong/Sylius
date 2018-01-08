@@ -197,12 +197,12 @@ interface UserInterface extends
     public function addOAuthAccount(UserOAuthInterface $oauth): void;
 
     /**
-     * @return UserMiniProgramInterface|null
+     * @return Collection|UserMiniProgramInterface[]
      */
-    public function getMiniProgramAccount(): ?UserMiniProgramInterface;
+    public function getMiniProgramAccounts(): Collection;
 
     /**
-     * @param UserMiniProgramInterface $oauth
+     * @param UserMiniProgramInterface $account
      */
-    public function setMiniProgramAccount(UserMiniProgramInterface $account): void;
+    public function addMiniProgramAccount(UserMiniProgramInterface $account): void;
 }
