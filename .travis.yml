@@ -1,7 +1,8 @@
 language: php
 
 dist: trusty
-group: deprecated-2017Q4
+
+sudo: false
 
 env:
     global:
@@ -11,15 +12,21 @@ env:
 matrix:
     include:
         -
-            sudo: required
             php: 7.1
             env:
                 - SYLIUS_SUITE="application"
-                - TRAVIS_NODE_VERSION="6.11"
+                - SYMFONY_VERSION="3.3.*"
             services:
                 - memcached
         -
-            sudo: false
+            if: type IN (cron, api) OR tag IS present
+            php: 7.1
+            env:
+                - SYLIUS_SUITE="application"
+                - SYMFONY_VERSION="3.4.*"
+            services:
+                - memcached
+        -
             php: 7.1
             env: SYLIUS_SUITE="docs packages"
             addons:
@@ -27,15 +34,21 @@ matrix:
                     packages:
                         - parallel
         -
-            sudo: required
+            if: type IN (cron, api) OR tag IS present
             php: 7.2
             env:
                 - SYLIUS_SUITE="application"
-                - TRAVIS_NODE_VERSION="6.11"
+                - SYMFONY_VERSION="3.3.*"
             services:
                 - memcached
         -
-            sudo: false
+            php: 7.2
+            env:
+                - SYLIUS_SUITE="application"
+                - SYMFONY_VERSION="3.4.*"
+            services:
+                - memcached
+        -
             php: 7.2
             env: SYLIUS_SUITE="packages"
             addons:
