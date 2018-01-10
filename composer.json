@@ -77,7 +77,8 @@
         "zendframework/zend-stdlib": "^3.1",
         "sensio/generator-bundle": "^3.1",
         "sylius/shop-api-plugin": "dev-zshwag",
-        "lexik/jwt-authentication-bundle": "^2.4"
+        "lexik/jwt-authentication-bundle": "^2.4",
+        "friendsofsymfony/http-cache-bundle": "^2.1"
     },
     "require-dev": {
         "akeneo/phpspec-skip-example-extension": "^3.0",

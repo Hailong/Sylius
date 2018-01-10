@@ -85,3 +85,16 @@ lexik_jwt_authentication:
     public_key_path:  '%jwt_public_key_path%'
     pass_phrase:      '%jwt_key_pass_phrase%'
     token_ttl:        '%jwt_token_ttl%'
+
+fos_http_cache:
+    cache_control:
+        defaults:
+            overwrite: true
+        rules:
+            # match all actions of a specific controller
+            -
+                match:
+                    attributes: { _controller: sylius.shop_api_plugin.controller.product.show_latest_product_action }
+                headers:
+                    cache_control: { public: true, max_age: 64000, s_maxage: 64000 }
+                    last_modified: "-1 hour"

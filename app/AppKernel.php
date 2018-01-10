@@ -30,6 +30,7 @@ class AppKernel extends Kernel
             new \Sylius\ShopApiPlugin\ShopApiPlugin(),
             new \League\Tactician\Bundle\TacticianBundle(),
             new Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
+            new FOS\HttpCacheBundle\FOSHttpCacheBundle(),
 
             new Zshwag\Bundle\WechatBundle\ZshwagWechatBundle(),
         ];
