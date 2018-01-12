@@ -18,12 +18,6 @@
             "homepage": "http://github.com/Sylius/Sylius/contributors"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "https://github.com/Hailong/SyliusShopApiPlugin"
-        }
-    ],
     "require": {
         "php": "^7.1",
 
@@ -76,7 +70,8 @@
         "zendframework/zend-hydrator": "^2.2",
         "zendframework/zend-stdlib": "^3.1",
         "sensio/generator-bundle": "^3.1",
-        "sylius/shop-api-plugin": "dev-zshwag",
+        "league/tactician-bundle": "^0.4",
+        "league/tactician-doctrine": "^1.1",
         "lexik/jwt-authentication-bundle": "^2.4",
         "friendsofsymfony/http-cache-bundle": "^2.1"
     },
@@ -183,6 +178,7 @@
             "Sylius\\Behat\\": "src/Sylius/Behat/",
             "Sylius\\Bundle\\": "src/Sylius/Bundle/",
             "Sylius\\Component\\": "src/Sylius/Component/",
+            "Sylius\\ShopApiPlugin\\": "src/Sylius/SyliusShopApiPlugin/src",
             "Zshwag\\Bundle\\WechatBundle\\": "src/Zshwag/Bundle/WechatBundle"
         },
         "exclude-from-classmap": [

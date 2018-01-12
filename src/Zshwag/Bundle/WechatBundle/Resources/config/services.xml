@@ -13,11 +13,6 @@
                 <argument key="db_password">%database_password%</argument>
             </argument>
         </service>
-        <service id="zshwag.listener.cart_blamer" class="Zshwag\Bundle\WechatBundle\EventListener\CartBlamerListener">
-            <argument type="service" id="sylius.manager.order" />
-            <argument type="service" id="sylius.context.cart" />
-            <tag name="kernel.event_listener" event="security.interactive_login" method="onInteractiveLogin" />
-        </service>
         <service id="zshwag.http_client" class="%zshwag.http_client.class%"/>
         <service id="security.authentication.listener.mini_program"
                  class="Zshwag\Bundle\WechatBundle\Security\Firewall\MiniProgramListener"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1a5522a835aa1fbfc27ee75d41c7c8d",
+    "content-hash": "7759ed31bdba49e78426ac219377b903",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1440,16 +1440,16 @@
         },
         {
             "name": "friendsofsymfony/http-cache-bundle",
-            "version": "2.1.1",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSHttpCacheBundle.git",
-                "reference": "ee5c2139cb0974dda5062f6a49bf9cc882257c49"
+                "reference": "cbf34498261c47621a6e9f64a072b1fad7a3ca7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSHttpCacheBundle/zipball/ee5c2139cb0974dda5062f6a49bf9cc882257c49",
-                "reference": "ee5c2139cb0974dda5062f6a49bf9cc882257c49",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSHttpCacheBundle/zipball/cbf34498261c47621a6e9f64a072b1fad7a3ca7a",
+                "reference": "cbf34498261c47621a6e9f64a072b1fad7a3ca7a",
                 "shasum": ""
             },
             "require": {
@@ -1520,7 +1520,7 @@
                 "purge",
                 "varnish"
             ],
-            "time": "2017-07-17T11:57:57+00:00"
+            "time": "2018-01-12T16:58:05+00:00"
         },
         {
             "name": "friendsofsymfony/oauth-server-bundle",
@@ -5060,16 +5060,16 @@
         },
         {
             "name": "sensiolabs/security-checker",
-            "version": "v4.1.6",
+            "version": "v4.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "387b6a3b723ba35588b33d5f8d14e28ed608bd30"
+                "reference": "d539ccba2b4dce515de04f16b7ed7ae5b9eeb434"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/387b6a3b723ba35588b33d5f8d14e28ed608bd30",
-                "reference": "387b6a3b723ba35588b33d5f8d14e28ed608bd30",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/d539ccba2b4dce515de04f16b7ed7ae5b9eeb434",
+                "reference": "d539ccba2b4dce515de04f16b7ed7ae5b9eeb434",
                 "shasum": ""
             },
             "require": {
@@ -5101,7 +5101,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2017-10-29T18:48:08+00:00"
+            "time": "2018-01-11T05:54:03+00:00"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -5608,60 +5608,6 @@
             ],
             "description": "Doctrine ORM hydration performance optimization made easier.",
             "time": "2017-09-11T15:44:45+00:00"
-        },
-        {
-            "name": "sylius/shop-api-plugin",
-            "version": "dev-zshwag",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Hailong/SyliusShopApiPlugin.git",
-                "reference": "cf1aabd86ea4e65ccf7b6f25d8c52bc28a4ed17f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Hailong/SyliusShopApiPlugin/zipball/cf1aabd86ea4e65ccf7b6f25d8c52bc28a4ed17f",
-                "reference": "cf1aabd86ea4e65ccf7b6f25d8c52bc28a4ed17f",
-                "shasum": ""
-            },
-            "require": {
-                "league/tactician-bundle": "^0.4",
-                "league/tactician-doctrine": "^1.1",
-                "php": "^7.1",
-                "sylius/sylius": "^1.0"
-            },
-            "require-dev": {
-                "doctrine/common": "<2.8",
-                "lakion/api-test-case": "^1.1",
-                "lexik/jwt-authentication-bundle": "^2.4",
-                "matthiasnoback/symfony-config-test": "^2.0",
-                "matthiasnoback/symfony-dependency-injection-test": "^1.0",
-                "phpspec/phpspec": "^3.2",
-                "phpunit/phpunit": "^5.6",
-                "sylius-labs/coding-standard": "^1.0",
-                "symplify/easy-coding-standard": "^2.4"
-            },
-            "suggest": {
-                "nelmio/cors-bundle": "allows you to send Cross-Origin Ajax API Request"
-            },
-            "type": "sylius-plugin",
-            "autoload": {
-                "psr-4": {
-                    "Sylius\\ShopApiPlugin\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\Sylius\\ShopApiPlugin\\": "tests/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "Shop API for Sylius E-Commerce.",
-            "support": {
-                "source": "https://github.com/Hailong/SyliusShopApiPlugin/tree/dev-zshwag"
-            },
-            "time": "2017-11-29T08:25:33+00:00"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -7850,16 +7796,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v2.9.0",
+            "version": "v2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "454ddbe65da6a9297446f442bad244e8a99a9a38"
+                "reference": "513a3765b56dd029175f9f32995566657ee89dda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/454ddbe65da6a9297446f442bad244e8a99a9a38",
-                "reference": "454ddbe65da6a9297446f442bad244e8a99a9a38",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/513a3765b56dd029175f9f32995566657ee89dda",
+                "reference": "513a3765b56dd029175f9f32995566657ee89dda",
                 "shasum": ""
             },
             "require": {
@@ -7886,10 +7832,12 @@
             "require-dev": {
                 "johnkary/phpunit-speedtrap": "^1.1 || ^2.0@dev",
                 "justinrainbow/json-schema": "^5.0",
+                "keradus/cli-executor": "^1.0",
                 "mikey179/vfsstream": "^1.6",
                 "php-coveralls/php-coveralls": "^2.0",
                 "php-cs-fixer/accessible-object": "^1.0",
                 "phpunit/phpunit": "^5.7.23 || ^6.4.3",
+                "phpunitgoodpractices/traits": "^1.0",
                 "symfony/phpunit-bridge": "^3.2.2 || ^4.0"
             },
             "suggest": {
@@ -7900,16 +7848,22 @@
                 "php-cs-fixer"
             ],
             "type": "application",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.10-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "PhpCsFixer\\": "src/"
                 },
                 "classmap": [
-                    "tests/Test/Assert/AssertTokensTrait.php",
                     "tests/Test/AbstractFixerTestCase.php",
                     "tests/Test/AbstractIntegrationTestCase.php",
+                    "tests/Test/Assert/AssertTokensTrait.php",
                     "tests/Test/IntegrationCase.php",
-                    "tests/Test/IntegrationCaseFactory.php"
+                    "tests/Test/IntegrationCaseFactory.php",
+                    "tests/TestCase.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7927,7 +7881,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2017-12-08T16:36:20+00:00"
+            "time": "2018-01-10T17:16:15+00:00"
         },
         {
             "name": "gecko-packages/gecko-php-unit",
@@ -11008,9 +10962,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "sylius/shop-api-plugin": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

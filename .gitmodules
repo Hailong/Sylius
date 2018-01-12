@@ -1,0 +1,4 @@
+[submodule "src/Sylius/SyliusShopApiPlugin"]
+	path = src/Sylius/SyliusShopApiPlugin
+	url = git@github.com:Hailong/SyliusShopApiPlugin.git
+	branch = zshwag

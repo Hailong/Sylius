@@ -76,6 +76,9 @@ sylius_mailer:
         name: "%mailer_sender_name%"
         address: "%mailer_sender_address%"
 
+shop_api:
+    auto_pickup_cart: true
+
 sylius_shop:
     checkout_resolver:
         pattern: "%sylius.security.shop_regex%/checkout/.+"
