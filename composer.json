@@ -72,7 +72,8 @@
         "league/tactician-bundle": "^0.4",
         "league/tactician-doctrine": "^1.1",
         "lexik/jwt-authentication-bundle": "^2.4",
-        "friendsofsymfony/http-cache-bundle": "^2.1"
+        "friendsofsymfony/http-cache-bundle": "^2.1",
+        "overtrue/wechat": "^4.0"
     },
     "require-dev": {
         "akeneo/phpspec-skip-example-extension": "^3.0",
@@ -178,6 +179,8 @@
             "Sylius\\Bundle\\": "src/Sylius/Bundle/",
             "Sylius\\Component\\": "src/Sylius/Component/",
             "Sylius\\ShopApiPlugin\\": "src/Sylius/SyliusShopApiPlugin/src",
+            "Lilocon\\WechatBundle\\": "src/Lilocon/WechatBundle",
+            "Orinoco\\WechatBundle\\": "src/Orinoco/WechatBundle",
             "Zshwag\\Bundle\\WechatBundle\\": "src/Zshwag/Bundle/WechatBundle"
         },
         "exclude-from-classmap": [

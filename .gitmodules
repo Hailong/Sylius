@@ -2,3 +2,7 @@
 	path = src/Sylius/SyliusShopApiPlugin
 	url = git@github.com:Hailong/SyliusShopApiPlugin.git
 	branch = zshwag
+[submodule "src/Lilocon/WechatBundle"]
+	path = src/Lilocon/WechatBundle
+	url = git@github.com:Hailong/WechatBundle.git
+	branch = zshwag

@@ -101,3 +101,33 @@ fos_http_cache:
                 headers:
                     cache_control: { public: true, max_age: 64000, s_maxage: 64000 }
                     last_modified: "-1 hour"
+
+# lilocon_wechat:
+
+#     # Debug 模式，bool 值：true/false
+#     # 当值为 false 时，所有的日志都不会记录
+#     debug: "%kernel.debug%"
+
+#     # 账号基本信息，请从微信公众平台/开放平台获取
+#     app_id: "%wechat_app_id%"
+#     secret: "%wechat_secret%"
+#     token: "%wechat_token%"
+#     aes_key: ""
+
+#     # sdk缓存配置
+#     cache:
+#       overwrite: false # 是否使用自定义缓存
+#       cache_id: wechat_cache # 自定义缓存service_id 若不填则使用easy_wechat默认缓存
+
+#     # 防火墙配置
+#     security:
+#       enabled: false # 是否使用微信授权功能
+#       user_provider_id: app_wechat_user_provider  # 用户提供者 service_id
+
+orinoco_wechat:
+    log:
+        enabled: false
+        level: debug
+        file: /Users/hailong/dev/zshwag/app/../var/logs/wechat.log
+    applications:
+        mini_program:

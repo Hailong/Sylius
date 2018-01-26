@@ -32,7 +32,10 @@ class AppKernel extends Kernel
             new Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
             new FOS\HttpCacheBundle\FOSHttpCacheBundle(),
 
+            // new Lilocon\WechatBundle\LiloconWechatBundle(),
+
             new Zshwag\Bundle\WechatBundle\ZshwagWechatBundle(),
+            new Orinoco\WechatBundle\OrinocoWechatBundle(),
         ];
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

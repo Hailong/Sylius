@@ -21,5 +21,12 @@
         <service id="security.authentication.provider.mini_program"
                  class="Zshwag\Bundle\WechatBundle\Security\Authentication\Provider\MiniProgramProvider"
                  public="false" />
+        <service id="zshwag.payum.gateway_factory_builder.miniprog"
+                 class="Zshwag\Bundle\WechatBundle\Payum\MiniProgram\MiniProgramGatewayFactoryBuilder"
+                 public="true">
+            <argument>Zshwag\Bundle\WechatBundle\Payum\MiniProgram\MiniProgramGatewayFactory</argument>
+            <argument type="service" id="orinoco_wechat.application.payment" />
+            <tag name="payum.gateway_factory_builder" factory="miniprog" />
+        </service>
     </services>
 </container>

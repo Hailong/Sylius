@@ -76,6 +76,8 @@ payum:
     gateways:
         offline:
             factory: offline
+        miniprog:
+            factory: miniprog
 
 stof_doctrine_extensions:
     default_locale: "%locale%"
