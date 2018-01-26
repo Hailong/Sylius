@@ -73,7 +73,7 @@
         "league/tactician-doctrine": "^1.1",
         "lexik/jwt-authentication-bundle": "^2.4",
         "friendsofsymfony/http-cache-bundle": "^2.1",
-        "overtrue/wechat": "^4.0"
+        "orinoco/wechat-bundle": "^1.0"
     },
     "require-dev": {
         "akeneo/phpspec-skip-example-extension": "^3.0",

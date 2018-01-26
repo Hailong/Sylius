@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "97d7bbf931cf2ed4d0e93c0107eeff5c",
+    "content-hash": "b3376d045e9503f0a8294c83375ff041",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -3990,6 +3990,49 @@
             "time": "2017-05-04T11:12:50+00:00"
         },
         {
+            "name": "orinoco/wechat-bundle",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Hailong/WechatBundle.git",
+                "reference": "b5d2d6d660bd9334da76b24357599be36ff5ed9f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Hailong/WechatBundle/zipball/b5d2d6d660bd9334da76b24357599be36ff5ed9f",
+                "reference": "b5d2d6d660bd9334da76b24357599be36ff5ed9f",
+                "shasum": ""
+            },
+            "require": {
+                "overtrue/wechat": "^4.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Orinoco\\WechatBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hailong Zhao",
+                    "email": "hailongzh@hotmail.com"
+                }
+            ],
+            "description": "This Symfony bundle provides integration support with the latest EasyWeChat library. (https://www.easywechat.com/)",
+            "homepage": "https://github.com/Hailong/WechatBundle",
+            "keywords": [
+                "sdk",
+                "symfony",
+                "wechat",
+                "weixin"
+            ],
+            "time": "2018-01-26T02:10:09+00:00"
+        },
+        {
             "name": "overtrue/socialite",
             "version": "2.0.1",
             "source": {
@@ -4041,16 +4084,16 @@
         },
         {
             "name": "overtrue/wechat",
-            "version": "4.0.14",
+            "version": "4.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/wechat.git",
-                "reference": "7eaf7d9bd9e0c0350d7e0da41bdf0216327b4112"
+                "reference": "4e87778d74dc61a50455189bf8fbc7114385adfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/wechat/zipball/7eaf7d9bd9e0c0350d7e0da41bdf0216327b4112",
-                "reference": "7eaf7d9bd9e0c0350d7e0da41bdf0216327b4112",
+                "url": "https://api.github.com/repos/overtrue/wechat/zipball/4e87778d74dc61a50455189bf8fbc7114385adfb",
+                "reference": "4e87778d74dc61a50455189bf8fbc7114385adfb",
                 "shasum": ""
             },
             "require": {
@@ -4099,7 +4142,7 @@
                 "weixin",
                 "weixin-sdk"
             ],
-            "time": "2018-01-20T02:51:13+00:00"
+            "time": "2018-01-26T03:09:10+00:00"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -9749,16 +9792,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.1.3",
+            "version": "v3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "579f4ce846734a1cf55d6a531d00ca07a43e3cda"
+                "reference": "e57b3a09784f846411aa7ed664eedb73e3399078"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/579f4ce846734a1cf55d6a531d00ca07a43e3cda",
-                "reference": "579f4ce846734a1cf55d6a531d00ca07a43e3cda",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/e57b3a09784f846411aa7ed664eedb73e3399078",
+                "reference": "e57b3a09784f846411aa7ed664eedb73e3399078",
                 "shasum": ""
             },
             "require": {
@@ -9796,7 +9839,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-12-26T14:43:21+00:00"
+            "time": "2018-01-25T21:31:33+00:00"
         },
         {
             "name": "openlss/lib-array2xml",
