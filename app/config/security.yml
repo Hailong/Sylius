@@ -59,8 +59,7 @@ security:
             stateless: true
             anonymous: true
             mini_program:
-                app_id: "%mini_program_appid%"
-                secret: "%mini_program_secret%"
+                app: orinoco_wechat.application.mini_program
                 login_path: shop_api_login_check
                 check_path: shop_api_login_check
                 success_handler: lexik_jwt_authentication.handler.authentication_success

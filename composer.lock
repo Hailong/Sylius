@@ -3991,16 +3991,16 @@
         },
         {
             "name": "orinoco/wechat-bundle",
-            "version": "1.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Hailong/WechatBundle.git",
-                "reference": "b5d2d6d660bd9334da76b24357599be36ff5ed9f"
+                "reference": "416042866b0e952d20eebfde49c88f7c30b3bdc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Hailong/WechatBundle/zipball/b5d2d6d660bd9334da76b24357599be36ff5ed9f",
-                "reference": "b5d2d6d660bd9334da76b24357599be36ff5ed9f",
+                "url": "https://api.github.com/repos/Hailong/WechatBundle/zipball/416042866b0e952d20eebfde49c88f7c30b3bdc5",
+                "reference": "416042866b0e952d20eebfde49c88f7c30b3bdc5",
                 "shasum": ""
             },
             "require": {
@@ -4030,7 +4030,7 @@
                 "wechat",
                 "weixin"
             ],
-            "time": "2018-01-26T02:10:09+00:00"
+            "time": "2018-01-29T09:28:10+00:00"
         },
         {
             "name": "overtrue/socialite",
@@ -4084,16 +4084,16 @@
         },
         {
             "name": "overtrue/wechat",
-            "version": "4.0.15",
+            "version": "4.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/wechat.git",
-                "reference": "4e87778d74dc61a50455189bf8fbc7114385adfb"
+                "reference": "bc723dcfb27801005e1771e8f6183ba0a002a0fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/wechat/zipball/4e87778d74dc61a50455189bf8fbc7114385adfb",
-                "reference": "4e87778d74dc61a50455189bf8fbc7114385adfb",
+                "url": "https://api.github.com/repos/overtrue/wechat/zipball/bc723dcfb27801005e1771e8f6183ba0a002a0fe",
+                "reference": "bc723dcfb27801005e1771e8f6183ba0a002a0fe",
                 "shasum": ""
             },
             "require": {
@@ -4142,7 +4142,7 @@
                 "weixin",
                 "weixin-sdk"
             ],
-            "time": "2018-01-26T03:09:10+00:00"
+            "time": "2018-01-29T04:21:13+00:00"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -7097,33 +7097,34 @@
         },
         {
             "name": "willdurand/hateoas-bundle",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/BazingaHateoasBundle.git",
-                "reference": "bf57a3e45a26937726f370933eec4d8a7062733c"
+                "reference": "d1f915fd4f8a7cd43a88a0ce97ffb28abe3a94fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/BazingaHateoasBundle/zipball/bf57a3e45a26937726f370933eec4d8a7062733c",
-                "reference": "bf57a3e45a26937726f370933eec4d8a7062733c",
+                "url": "https://api.github.com/repos/willdurand/BazingaHateoasBundle/zipball/d1f915fd4f8a7cd43a88a0ce97ffb28abe3a94fa",
+                "reference": "d1f915fd4f8a7cd43a88a0ce97ffb28abe3a94fa",
                 "shasum": ""
             },
             "require": {
                 "jms/serializer-bundle": "~1.0 || ^2.0",
-                "php": ">5.4",
-                "symfony/framework-bundle": "~2.3 || ~3.0",
+                "php": ">5.4 |^7.0",
+                "symfony/framework-bundle": "~2.3 || ~3.0 || ~4.0",
                 "willdurand/hateoas": "^2.10.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.5",
-                "symfony/expression-language": "~2.4 || ~3.0",
+                "phpunit/phpunit": "~4.5 || ~5.0",
+                "symfony/expression-language": "~2.4 || ~3.0 || ~4.0",
+                "symfony/stopwatch": "~2.4 || ~3.0 || ~4.0",
                 "twig/twig": "~1.12"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -7146,7 +7147,7 @@
                 "HATEOAS",
                 "rest"
             ],
-            "time": "2017-06-07T17:54:37+00:00"
+            "time": "2018-01-27T13:03:07+00:00"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -10034,16 +10035,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "4.2.0",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "66465776cfc249844bde6d117abff1d22e06c2da"
+                "reference": "94fd0001232e47129dd3504189fa1c7225010d08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/66465776cfc249844bde6d117abff1d22e06c2da",
-                "reference": "66465776cfc249844bde6d117abff1d22e06c2da",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94fd0001232e47129dd3504189fa1c7225010d08",
+                "reference": "94fd0001232e47129dd3504189fa1c7225010d08",
                 "shasum": ""
             },
             "require": {
@@ -10081,7 +10082,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-11-27T17:38:31+00:00"
+            "time": "2017-11-30T07:14:17+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -11217,16 +11218,16 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "4.3.1",
+            "version": "4.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "823ba04bdcfe642ec2b912e4650d6e33d48c2ef7"
+                "reference": "872ecd4782be157706a97d72a0a763675c303dd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/823ba04bdcfe642ec2b912e4650d6e33d48c2ef7",
-                "reference": "823ba04bdcfe642ec2b912e4650d6e33d48c2ef7",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/872ecd4782be157706a97d72a0a763675c303dd8",
+                "reference": "872ecd4782be157706a97d72a0a763675c303dd8",
                 "shasum": ""
             },
             "require": {
@@ -11250,7 +11251,7 @@
                 "MIT"
             ],
             "description": "Slevomat Coding Standard for PHP_CodeSniffer complements Consistence Coding Standard by providing sniffs with additional checks.",
-            "time": "2018-01-21T20:33:49+00:00"
+            "time": "2018-01-28T21:06:07+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

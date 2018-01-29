@@ -24,11 +24,11 @@ parameters:
     jwt_key_pass_phrase:  ''                                         # ssh key pass phrase
     jwt_token_ttl:        3600
 
-    wechat_app_id: ~
-    wechat_secret: ~
-    wechat_token: ~
-
-    mini_program_appid: ~
-    mini_program_secret: ~
+    wechat_sandbox: true
+    wechat_mini_program_app_id: ~
+    wechat_mini_program_secret: ~
+    wechat_payment_app_id: ~
+    wechat_payment_mch_id: ~
+    wechat_payment_key: ~
 
     secret: EDITME

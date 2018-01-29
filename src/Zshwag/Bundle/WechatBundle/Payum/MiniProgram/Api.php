@@ -61,6 +61,16 @@ class Api
     }
 
     /**
+     * @param string $prepayId
+     * 
+     * @return array
+     */
+    public function bridgeConfig($prepayId)
+    {
+        return $this->app->jssdk->bridgeConfig($prepayId);
+    }
+
+    /**
      * @param array $fields
      *
      * @return array

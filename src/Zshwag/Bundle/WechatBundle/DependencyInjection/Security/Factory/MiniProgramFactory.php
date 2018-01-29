@@ -25,9 +25,7 @@ class MiniProgramFactory extends AbstractFactory
         $container
             ->setDefinition($providerId, new DefinitionDecorator('security.authentication.provider.mini_program'))
             ->addArgument(new Reference('sylius.mini_program.user_provider'))
-            ->addArgument(new Reference('zshwag.http_client'))
-            ->addArgument($config['app_id'])
-            ->addArgument($config['secret'])
+            ->addArgument(new Reference($config['app']))
         ;
 
         return $providerId;
@@ -44,8 +42,7 @@ class MiniProgramFactory extends AbstractFactory
 
         $builder = $node->children();
         $builder
-            ->scalarNode('app_id')->cannotBeEmpty()->isRequired()->end()
-            ->scalarNode('secret')->cannotBeEmpty()->isRequired()->end()
+            ->scalarNode('app')->cannotBeEmpty()->isRequired()->end()
         ;
     }
 

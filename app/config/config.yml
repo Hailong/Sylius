@@ -125,9 +125,12 @@ fos_http_cache:
 #       user_provider_id: app_wechat_user_provider  # 用户提供者 service_id
 
 orinoco_wechat:
-    log:
-        enabled: false
-        level: debug
-        file: /Users/hailong/dev/zshwag/app/../var/logs/wechat.log
+    sandbox: "%wechat_sandbox%"
     applications:
         mini_program:
+            app_id: "%wechat_mini_program_app_id%"
+            secret: "%wechat_mini_program_secret%"
+        payment:
+            app_id: "%wechat_payment_app_id%"
+            mch_id: "%wechat_payment_mch_id%"
+            key: "%wechat_payment_key%"

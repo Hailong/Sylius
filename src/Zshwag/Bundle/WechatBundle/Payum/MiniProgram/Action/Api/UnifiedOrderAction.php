@@ -3,6 +3,7 @@ namespace Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Action\Api;
 
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Exception\RequestNotSupportedException;
+use Payum\Core\Reply\HttpResponse;
 use Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Request\Api\UnifiedOrder;
 
 class UnifiedOrderAction extends BaseApiAwareAction
@@ -19,6 +20,10 @@ class UnifiedOrderAction extends BaseApiAwareAction
 
         $model->replace(
             $this->api->unifiedOrder((array) $model)
+        );
+
+        throw new HttpResponse(
+            $this->api->bridgeConfig($model['prepay_id'])
         );
     }
 

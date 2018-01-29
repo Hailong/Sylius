@@ -2,7 +2,6 @@
 
 namespace Zshwag\Bundle\WechatBundle\Security\Authentication\Response;
 
-use Buzz\Message\MessageInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 
 /**
@@ -39,23 +38,15 @@ class CodeToSessionResponse
 
     /**
      * @param string $jsCode
-     * @param MessageInterface $response
+     * @param array $response
      */
-    public function __construct($jsCode, MessageInterface $response)
+    public function __construct($jsCode, array $response)
     {
         $this->jsCode = $jsCode;
-        $this->response = $response;
-
-        $content = json_decode($this->response->getContent(), true);
-
-        if (JSON_ERROR_NONE !== json_last_error()) {
-            throw new AuthenticationException('Response is not a valid JSON code.');
-        }
-
-        $this->content = filter_var_array($content, $this->filters);
+        $this->content = filter_var_array($response, $this->filters);
 
         if (!$this->content['openid'] || !$this->content['session_key']) {
-            throw new AuthenticationException($response->getContent());
+            throw new AuthenticationException($response);
         }
     }
 
