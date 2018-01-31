@@ -83,7 +83,7 @@ class MiniProgramProvider implements AuthenticationProviderInterface
         $userinfo = $this->decryptUserInfo($response->getSessionKey(), $token->getEncryptedData(), $token->getIv());
         $user->setMiniProgramUserInfo($userinfo);
 
-        $token = new MiniProgramUserToken($token->getCode(), $user->getRoles());
+        $token = new MiniProgramUserToken($token->getCode(), '', '', $user->getRoles());
         $token->setUser($user);
         $token->setAuthenticated(true);
 
