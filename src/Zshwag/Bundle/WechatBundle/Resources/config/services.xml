@@ -32,5 +32,9 @@
                  class="Zshwag\Bundle\WechatBundle\EventListener\AuthenticationSuccessListener">
             <tag name="kernel.event_listener" event="lexik_jwt_authentication.on_authentication_success" method="onAuthenticationSuccessResponse" />
         </service>
+        <service id="zshwag.event.jwt_expired_listener"
+                 class="Zshwag\Bundle\WechatBundle\EventListener\JWTExpiredListener">
+            <tag name="kernel.event_listener" event="lexik_jwt_authentication.on_jwt_expired" method="onJWTExpired" />
+        </service>
     </services>
 </container>
