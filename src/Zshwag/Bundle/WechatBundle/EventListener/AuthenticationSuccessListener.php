@@ -2,6 +2,7 @@
 
 namespace Zshwag\Bundle\WechatBundle\EventListener;
 
+use Symfony\Component\Security\Core\User\UserInterface;
 use Lexik\Bundle\JWTAuthenticationBundle\Event\AuthenticationSuccessEvent;
 
 class AuthenticationSuccessListener
