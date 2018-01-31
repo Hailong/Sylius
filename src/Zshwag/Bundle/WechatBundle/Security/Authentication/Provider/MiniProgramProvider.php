@@ -119,6 +119,7 @@ class MiniProgramProvider implements AuthenticationProviderInterface
         // 4. 储存到数据库中
         // User::storeUserInfo($userinfo, $skey, $sessionKey);
 
-        return compact('userinfo', 'skey');
+        // return compact('userinfo', 'skey');
+        return $userinfo;
     }
 }

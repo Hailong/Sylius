@@ -19,10 +19,12 @@ class AuthenticationSuccessListener
             return;
         }
 
+        $data['code'] = 0;
         $data['data'] = array(
             'skey' => $data['token'],
             'userinfo' => $user->getMiniProgramUserInfo(),
         );
+        unset($data['token']);
 
         $event->setData($data);
     }
