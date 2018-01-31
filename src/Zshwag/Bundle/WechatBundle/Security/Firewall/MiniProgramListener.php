@@ -18,11 +18,17 @@ class MiniProgramListener extends AbstractAuthenticationListener
 {
     protected function attemptAuthentication(Request $request)
     {
-        if (!$request->headers->has('X-WX-Code')) {
+        if (!$request->headers->has('X-WX-Code') ||
+            !$request->headers->has('X-WX-Encrypted-Data') ||
+            !$request->headers->has('X-WX-IV')) {
             throw new AuthenticationException('No authentication code in the request.');
         }
 
-        $token = new MiniProgramUserToken($request->headers->get('X-WX-Code'));
+        $token = new MiniProgramUserToken(
+            $request->headers->get('X-WX-Code'),
+            $request->headers->get('X-WX-Encrypted-Data'),
+            $request->headers->get('X-WX-IV')
+        );
 
         return $this->authenticationManager->authenticate($token);
     }

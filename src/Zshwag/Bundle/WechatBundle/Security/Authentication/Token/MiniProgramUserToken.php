@@ -18,11 +18,23 @@ class MiniProgramUserToken extends AbstractToken
      */
     private $code;
 
-    public function __construct(string $code, array $roles = array())
+    /**
+     * @var string
+     */
+    private $encryptedData;
+
+    /**
+     * @var string
+     */
+    private $iv;
+
+    public function __construct(string $code, string $encryptedData, string $iv, array $roles = array())
     {
         parent::__construct($roles);
 
         $this->code = $code;
+        $this->encryptedData = $encryptedData;
+        $this->iv = $iv;
 
         // If the user has roles, consider it authenticated
         $this->setAuthenticated(count($roles) > 0);
@@ -34,6 +46,22 @@ class MiniProgramUserToken extends AbstractToken
     public function getCode()
     {
         return $this->code;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEncryptedData()
+    {
+        return $this->encryptedData;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIv()
+    {
+        return $this->iv;
     }
 
     /**

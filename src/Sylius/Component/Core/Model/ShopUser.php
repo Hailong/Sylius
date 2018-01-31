@@ -23,6 +23,8 @@ class ShopUser extends BaseUser implements ShopUserInterface
      */
     protected $customer;
 
+    protected $miniProgramUserInfo;
+
     /**
      * {@inheritdoc}
      */
@@ -82,5 +84,15 @@ class ShopUser extends BaseUser implements ShopUserInterface
     public function setEmailCanonical(?string $emailCanonical): void
     {
         $this->customer->setEmailCanonical($emailCanonical);
+    }
+
+    public function setMiniProgramUserInfo($userinfo)
+    {
+        $this->miniProgramUserInfo = $userinfo;
+    }
+
+    public function getMiniProgramUserInfo()
+    {
+        return $this->miniProgramUserInfo;
     }
 }
