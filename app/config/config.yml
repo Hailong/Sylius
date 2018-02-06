@@ -12,7 +12,7 @@ imports:
     - { resource: "security.yml" }
 
 parameters:
-    locale: en_US
+    locale: zh_CN
 
 framework:
     translator: { fallbacks: ["%locale%", "en"] }
