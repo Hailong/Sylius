@@ -38,5 +38,9 @@
             <tag name="sylius.gateway_configuration_type" type="stripe_checkout" label="sylius.payum_gateway_factory.stripe_checkout" />
             <tag name="form.type" />
         </service>
+        <service id="sylius.form.type.gateway_configuration.alipay_wap" class="Sylius\Bundle\PayumBundle\Form\Type\AlipayWapGatewayConfigurationType">
+            <tag name="sylius.gateway_configuration_type" type="alipay_wap_checkout" label="sylius.payum_gateway_factory.alipay_wap_checkout" />
+            <tag name="form.type" />
+        </service>
     </services>
 </container>

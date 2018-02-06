@@ -6,3 +6,6 @@
 	path = src/Lilocon/WechatBundle
 	url = git@github.com:Hailong/WechatBundle.git
 	branch = zshwag
+[submodule "src/Orinoco/Alipay"]
+	path = src/Orinoco/Alipay
+	url = git@github.com:Hailong/Alipay.git

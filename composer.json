@@ -181,8 +181,14 @@
             "Sylius\\ShopApiPlugin\\": "src/Sylius/SyliusShopApiPlugin/src",
             "Lilocon\\WechatBundle\\": "src/Lilocon/WechatBundle",
             "Orinoco\\WechatBundle\\": "src/Orinoco/WechatBundle",
-            "Zshwag\\Bundle\\WechatBundle\\": "src/Zshwag/Bundle/WechatBundle"
+            "Zshwag\\Bundle\\WechatBundle\\": "src/Zshwag/Bundle/WechatBundle",
+            "Payum\\Alipay\\Wap\\": "src/Orinoco/Alipay/Wap"
         },
+        "classmap": [
+            "src/Orinoco/Alipay/AlipaySDK/alipay-sdk-PHP-20180104135052/aop/",
+            "src/Orinoco/Alipay/AlipaySDK/alipay.trade.page.pay-PHP-UTF-8/pagepay/buildermodel/",
+            "src/Orinoco/Alipay/AlipaySDK/alipay.trade.wap.pay-PHP-UTF-8/wappay/buildermodel/"
+        ],
         "exclude-from-classmap": [
             "src/Sylius/*/*/Tests/"
         ]

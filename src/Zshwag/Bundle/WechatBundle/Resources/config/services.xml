@@ -28,6 +28,12 @@
             <argument type="service" id="orinoco_wechat.application.payment" />
             <tag name="payum.gateway_factory_builder" factory="miniprog" />
         </service>
+        <service id="zshwag.payum.gateway_factory_builder.alipay_wap"
+                 class="Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder"
+                 public="true">
+            <argument>Payum\Alipay\Wap\AlipayWapGatewayFactory</argument>
+            <tag name="payum.gateway_factory_builder" factory="alipay_wap_checkout" />
+        </service>
         <service id="zshwag.event.authentication_success_listener"
                  class="Zshwag\Bundle\WechatBundle\EventListener\AuthenticationSuccessListener">
             <tag name="kernel.event_listener" event="lexik_jwt_authentication.on_authentication_success" method="onAuthenticationSuccessResponse" />
