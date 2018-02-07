@@ -3,4 +3,7 @@
   <route id="zshwag_alipay_notify" path="/gateway/notify">
     <default key="_controller">ZshwagAlipayBundle:Gateway:notify</default>
   </route>
+  <route id="zshwag_alipay_onauth" path="/gateway/onauth">
+    <default key="_controller">ZshwagAlipayBundle:Gateway:onAuth</default>
+  </route>
 </routes>

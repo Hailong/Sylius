@@ -25,4 +25,8 @@ class GatewayController extends Controller
         return new Response('success');
     }
 
+    public function onAuthAction(Request $request)
+    {
+        return new Response('success');
+    }
 }
