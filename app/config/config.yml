@@ -10,6 +10,7 @@ imports:
 
     - { resource: "parameters.yml" }
     - { resource: "security.yml" }
+    - { resource: "@ZshwagAlipayBundle/Resources/config/services.xml" }
 
 parameters:
     locale: zh_CN

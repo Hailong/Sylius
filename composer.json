@@ -182,6 +182,7 @@
             "Lilocon\\WechatBundle\\": "src/Lilocon/WechatBundle",
             "Orinoco\\WechatBundle\\": "src/Orinoco/WechatBundle",
             "Zshwag\\Bundle\\WechatBundle\\": "src/Zshwag/Bundle/WechatBundle",
+            "Zshwag\\AlipayBundle\\": "src/Zshwag/AlipayBundle",
             "Payum\\Alipay\\Wap\\": "src/Orinoco/Alipay/Wap"
         },
         "classmap": [

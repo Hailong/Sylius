@@ -36,6 +36,7 @@ class AppKernel extends Kernel
 
             new Zshwag\Bundle\WechatBundle\ZshwagWechatBundle(),
             new Orinoco\WechatBundle\OrinocoWechatBundle(),
+            new Zshwag\AlipayBundle\ZshwagAlipayBundle(),
         ];
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

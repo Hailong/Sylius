@@ -37,3 +37,7 @@ _liip_imagine:
 zshwag_wechat:
     resource: "@ZshwagWechatBundle/Resources/config/routing.xml"
     prefix:   /
+
+zshwag_alipay:
+    resource: "@ZshwagAlipayBundle/Resources/config/routing.xml"
+    prefix:   /alipay
