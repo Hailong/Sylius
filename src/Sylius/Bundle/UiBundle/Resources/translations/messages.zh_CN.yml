@@ -209,7 +209,7 @@ sylius:
         current_stock: '当前货架'
         customer: '客户'
         customer_can_login_to_the_store: '客户是否可以登录到该店铺？'
-        customer_care: '客户关怀'
+        customer_care: '客户服务'
         customer_details: '客户详细信息'
         customer_groups: '客户组'
         customer_id: '客户ID'
