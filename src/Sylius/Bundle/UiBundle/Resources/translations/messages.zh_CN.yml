@@ -393,7 +393,7 @@ sylius:
         it_seems_you_have_an_account_already: '看来你已经有一个帐户'
         item: '项'
         items: '项目'
-        item.choice: "{0} |{1}，1 项 |]1，Inf]，%count% 项目"
+        item.choice: "{0} |{1}，1 项 |]1,Inf]，%count% 项目"
         items_total: '总计项目'
         jump_to_page: '跳转到页'
         label: '标签'
