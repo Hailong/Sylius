@@ -6,4 +6,17 @@
        Fonts
 --------------------*/
 
+@fontName          : 'Noto Sans SC';
+@fontSmoothing     : antialiased;
+
+@headerFont        : @fontName, sans-serif;
+@pageFont          : @fontName, sans-serif;
+
 @importGoogleFonts : false;
+
+/*-------------------
+      Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+@black            : #222;

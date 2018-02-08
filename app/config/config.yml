@@ -26,6 +26,8 @@ framework:
     validation: { enable_annotations: true }
     templating: { engines: ["twig"] }
     default_locale: "%locale%"
+    assets:
+        version: v1.0
     session:
         handler_id: Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
 

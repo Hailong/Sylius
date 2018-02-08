@@ -1,3 +1,13 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+@borderWidth: 0;
+@boxShadow: none;
+@itemFontWeight: 300;
+@hoverItemBackground: #fff;
+@hoverItemTextColor: #bdb093;
+@activeItemBackground: #fff;
+@activeItemTextColor: #bdb093;
+@activeHoverItemBackground: #fff;
+@activeHoverItemColor: #bdb093;

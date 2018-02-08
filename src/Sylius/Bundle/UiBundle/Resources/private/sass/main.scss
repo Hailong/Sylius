@@ -21,19 +21,12 @@
   margin-bottom: 1em;
 }
 
-body.pushable {
-  .pusher {
-    background-color: $color-background;
-  }
-}
 .ui.visible.left.sidebar~.fixed.menu,
 .ui.visible.left.sidebar~.pusher {
   padding-right: 260px;
 }
 
 body.centered {
-  background-color: $color-background;
-
   .grid {
     height: 100%;
   }

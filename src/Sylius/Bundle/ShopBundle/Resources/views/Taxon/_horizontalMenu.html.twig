@@ -19,7 +19,7 @@
 {% import _self as macros %}
 
 {% if taxons|length > 0 %}
-<div class="ui large stackable menu">
+<div class="ui huge stackable borderless menu">
     {% for taxon in taxons %}
         {{ macros.item(taxon) }}
     {% endfor %}
