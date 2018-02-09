@@ -31,4 +31,6 @@ parameters:
     wechat_payment_mch_id: ~
     wechat_payment_key: ~
 
+    static_cdn: ~
+
     secret: EDITME

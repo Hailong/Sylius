@@ -28,6 +28,8 @@ framework:
     default_locale: "%locale%"
     assets:
         version: v1.0
+        base_urls:
+            - '%static_cdn%'
     session:
         handler_id: Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
 
