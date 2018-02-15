@@ -21,37 +21,19 @@ class StatusAction implements ActionInterface
 
         $model = ArrayObject::ensureArrayObject($request->getModel());
 
-        if (false == $model[Constants::FIELD_STATUS]) {
-            $request->markNew();
-
-            return;
-        }
-
-        if (Constants::STATUS_PENDING == $model[Constants::FIELD_STATUS]) {
-            $request->markNew();
-
-            return;
-        }
-
-        if (Constants::STATUS_AUTHORIZED == $model[Constants::FIELD_STATUS]) {
-            $request->markAuthorized();
-
-            return;
-        }
-
-        if (Constants::STATUS_CAPTURED == $model[Constants::FIELD_STATUS]) {
+        if ($model['placeholder']) {
             $request->markCaptured();
 
             return;
         }
 
-        if (Constants::STATUS_CANCELED == $model[Constants::FIELD_STATUS]) {
-            $request->markCanceled();
+        if ($model['prepay_id']) {
+            $request->markPending();
 
             return;
         }
 
-        $request->markUnknown();
+        $request->markNew();
     }
 
     /**

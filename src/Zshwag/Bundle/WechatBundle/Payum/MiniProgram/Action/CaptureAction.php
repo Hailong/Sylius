@@ -32,9 +32,17 @@ class CaptureAction extends GatewayAwareAction
             return;
         }
 
+        if (isset($httpRequest->query['placeholder'])) {
+            $details->replace($httpRequest->query);
+
+            return;
+        }
+
         if (false == $details['notify_url'] && $request->getToken()) {
             $details['notify_url'] = $request->getToken()->getTargetUrl();
         }
+
+        $details['afterUrl'] = $request->getToken()->getAfterUrl();
 
         $this->gateway->execute(new UnifiedOrder($details));
     }

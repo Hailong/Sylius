@@ -67,7 +67,7 @@ class Api
      */
     public function bridgeConfig($prepayId)
     {
-        return $this->app->jssdk->bridgeConfig($prepayId);
+        return $this->app->jssdk->bridgeConfig($prepayId, false);
     }
 
     /**

@@ -22,9 +22,10 @@ class UnifiedOrderAction extends BaseApiAwareAction
             $this->api->unifiedOrder((array) $model)
         );
 
-        throw new HttpResponse(
+        throw new HttpResponse(json_encode(array_merge(
+            ['afterUrl' => $model['afterUrl']],
             $this->api->bridgeConfig($model['prepay_id'])
-        );
+        )));
     }
 
     /**
