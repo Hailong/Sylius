@@ -21,7 +21,7 @@ class StatusAction implements ActionInterface
 
         $model = ArrayObject::ensureArrayObject($request->getModel());
 
-        if ($model['placeholder']) {
+        if ($model['transaction_id']) {
             $request->markCaptured();
 
             return;

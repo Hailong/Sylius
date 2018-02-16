@@ -9,6 +9,7 @@ use Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Action\NotifyAction;
 use Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Action\RefundAction;
 use Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Action\StatusAction;
 use Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Action\Api\UnifiedOrderAction;
+use Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Action\Api\HandlePaidNotifyAction;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\GatewayFactory;
 
@@ -37,6 +38,7 @@ class MiniProgramGatewayFactory extends GatewayFactory
             'payum.action.status' => new StatusAction(),
             'payum.action.convert_payment' => new ConvertPaymentAction(),
             'payum.action.api.unified_order' => new UnifiedOrderAction(),
+            'payum.action.api.handle_paid_notify' => new HandlePaidNotifyAction(),
         ]);
 
         if (false == $config['payum.api']) {

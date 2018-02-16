@@ -1,6 +1,7 @@
 <?php
 namespace Zshwag\Bundle\WechatBundle\Payum\MiniProgram;
 
+use Closure;
 use Http\Message\MessageFactory;
 use Payum\Core\Exception\Http\HttpException;
 use Payum\Core\HttpClientInterface;
@@ -68,6 +69,16 @@ class Api
     public function bridgeConfig($prepayId)
     {
         return $this->app->jssdk->bridgeConfig($prepayId, false);
+    }
+
+    /**
+     * @param \Closure $closure
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function handlePaidNotify(Closure $closure)
+    {
+        return $this->app->handlePaidNotify($closure);
     }
 
     /**
