@@ -18,14 +18,26 @@ class UnifiedOrderAction extends BaseApiAwareAction
 
         $model = ArrayObject::ensureArrayObject($request->getModel());
 
-        $model->replace(
-            $this->api->unifiedOrder((array) $model)
-        );
+        $order = $this->api->unifiedOrder([
+            'body' => $model['body'],
+            'out_trade_no' => $model['out_trade_no'],
+            'total_fee' => $model['total_fee'],
+            'notify_url' => $model['notify_url'],
+            'trade_type' => $model['trade_type'],
+            'openid' => $model['openid'],
+        ]);
+        $model->replace($order);
 
-        throw new HttpResponse(json_encode(array_merge(
-            ['afterUrl' => $model['afterUrl']],
-            $this->api->bridgeConfig($model['prepay_id'])
-        )));
+        if (isset($order['prepay_id'])) {
+            $resp = array_merge(
+                ['afterUrl' => $model['afterUrl']],
+                $this->api->bridgeConfig($model['prepay_id'])
+            );
+        } else {
+            $resp = $order;
+        }
+
+        throw new HttpResponse(json_encode($resp));
     }
 
     /**
