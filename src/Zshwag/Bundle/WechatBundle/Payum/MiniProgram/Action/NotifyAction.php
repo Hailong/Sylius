@@ -2,12 +2,14 @@
 namespace Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Action;
 
 use Payum\Core\Action\ActionInterface;
+use Payum\Core\GatewayAwareInterface;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Exception\RequestNotSupportedException;
 use Payum\Core\GatewayAwareTrait;
 use Payum\Core\Request\Notify;
+use Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Request\Api\HandlePaidNotify;
 
-class NotifyAction implements ActionInterface
+class NotifyAction implements ActionInterface, GatewayAwareInterface
 {
     use GatewayAwareTrait;
 
@@ -22,7 +24,7 @@ class NotifyAction implements ActionInterface
 
         $model = ArrayObject::ensureArrayObject($request->getModel());
 
-        throw new \LogicException('Not implemented');
+        $this->gateway->execute(new HandlePaidNotify($model));
     }
 
     /**

@@ -26,13 +26,10 @@ class UnifiedOrderAction extends BaseApiAwareAction
             'trade_type' => $model['trade_type'],
             'openid' => $model['openid'],
         ]);
-        $model->replace($order);
 
         if (isset($order['prepay_id'])) {
-            $resp = array_merge(
-                ['afterUrl' => $model['afterUrl']],
-                $this->api->bridgeConfig($model['prepay_id'])
-            );
+            $model->replace($order);
+            $resp = $this->api->bridgeConfig($model['prepay_id']);
         } else {
             $resp = $order;
         }

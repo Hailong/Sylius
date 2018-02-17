@@ -3,7 +3,8 @@ namespace Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Action\Api;
 
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Exception\RequestNotSupportedException;
-use Payum\Core\Bridge\Symfony\Reply\HttpResponse;
+use Payum\Core\Bridge\Symfony\Reply\HttpResponse as SymfonyHttpResponse;
+use Payum\Core\Reply\HttpResponse;
 use Zshwag\Bundle\WechatBundle\Payum\MiniProgram\Request\Api\HandlePaidNotify;
 
 class HandlePaidNotifyAction extends BaseApiAwareAction
@@ -18,13 +19,17 @@ class HandlePaidNotifyAction extends BaseApiAwareAction
 
         $model = ArrayObject::ensureArrayObject($request->getModel());
 
-        $resp = $this->api->handlePaidNotify(function ($message, $fail) {
-            $model->replace($message);
+        try {
+            $resp = $this->api->handlePaidNotify(function ($message, $fail) use ($model) {
+                $model->replace($message);
 
-            return true;
-        });
+                return true;
+            });
+        } catch (\Exception $e) {
+            throw new HttpResponse($e->getMessage(), $e->getCode());
+        }
 
-        throw new HttpResponse($resp);
+        throw new SymfonyHttpResponse($resp);
     }
 
     /**
