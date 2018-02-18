@@ -143,3 +143,6 @@ orinoco_wechat:
             app_id: "%wechat_payment_app_id%"
             mch_id: "%wechat_payment_mch_id%"
             key: "%wechat_payment_key%"
+        official_account:
+            app_id: "%wechat_official_account_app_id%"
+            secret: "%wechat_official_account_secret%"

@@ -34,9 +34,12 @@ class AppKernel extends Kernel
 
             // new Lilocon\WechatBundle\LiloconWechatBundle(),
 
+            new Nvidia\WeChat\JSSDKBundle\NvidiaWeChatJSSDKBundle(),
+
             new Zshwag\Bundle\WechatBundle\ZshwagWechatBundle(),
             new Orinoco\WechatBundle\OrinocoWechatBundle(),
             new Zshwag\AlipayBundle\ZshwagAlipayBundle(),
+            new Zshwag\StaticPageBundle\ZshwagStaticPageBundle(),
         ];
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

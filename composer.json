@@ -183,7 +183,9 @@
             "Orinoco\\WechatBundle\\": "src/Orinoco/WechatBundle",
             "Zshwag\\Bundle\\WechatBundle\\": "src/Zshwag/Bundle/WechatBundle",
             "Zshwag\\AlipayBundle\\": "src/Zshwag/AlipayBundle",
-            "Payum\\Alipay\\Wap\\": "src/Orinoco/Alipay/Wap"
+            "Payum\\Alipay\\Wap\\": "src/Orinoco/Alipay/Wap",
+            "Nvidia\\WeChat\\JSSDKBundle\\": "src/spring/WeChat/JSSDKBundle",
+            "Zshwag\\StaticPageBundle\\": "src/Zshwag/staticpagebundle"
         },
         "classmap": [
             "src/Orinoco/Alipay/AlipaySDK/alipay-sdk-PHP-20180104135052/aop/",

@@ -34,6 +34,10 @@ sylius_shop_default_locale:
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.xml"
 
+spring:
+    resource: "@NvidiaWeChatJSSDKBundle/Resources/config/routing.yml"
+    prefix:   /spring
+
 zshwag_wechat:
     resource: "@ZshwagWechatBundle/Resources/config/routing.xml"
     prefix:   /
@@ -41,3 +45,7 @@ zshwag_wechat:
 zshwag_alipay:
     resource: "@ZshwagAlipayBundle/Resources/config/routing.xml"
     prefix:   /alipay
+
+zshwag_static_page:
+    resource: "@ZshwagStaticPageBundle/Resources/config/routing.xml"
+    prefix:   /page

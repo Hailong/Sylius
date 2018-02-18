@@ -9,3 +9,9 @@
 [submodule "src/Orinoco/Alipay"]
 	path = src/Orinoco/Alipay
 	url = git@github.com:Hailong/Alipay.git
+[submodule "src/spring"]
+	path = src/spring
+	url = git@bitbucket.org:lodev/spring.git
+[submodule "src/Zshwag/staticpagebundle"]
+	path = src/Zshwag/staticpagebundle
+	url = git@bitbucket.org:lodev/staticpagebundle.git

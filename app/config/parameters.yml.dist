@@ -30,6 +30,8 @@ parameters:
     wechat_payment_app_id: ~
     wechat_payment_mch_id: ~
     wechat_payment_key: ~
+    wechat_official_account_app_id: ~
+    wechat_official_account_secret: ~
 
     static_cdn: ~
 
