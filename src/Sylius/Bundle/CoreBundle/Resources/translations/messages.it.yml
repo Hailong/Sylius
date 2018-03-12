@@ -22,7 +22,7 @@ sylius:
         promotion_coupon:
             per_customer_usage_limit: Limite di utilizzo per cliente
         group:
-            name: Nome
+            name: "Nome\n"
             roles: Regole
         channel:
             contact_email: Email di contatto
@@ -67,7 +67,7 @@ sylius:
             channels: Canali
             enabled: Abilitato
         product_filter:
-            name: Nome
+            name: "Nome\n"
             code: Codice
         product_variant:
             tax_category: Categoria fiscale
@@ -123,7 +123,7 @@ sylius:
             product: Prodotto associato
             type: Tipi di associazione
         product_association_type:
-            name: Nome
+            name: "Nome\n"
         promotion_filter:
             products: Filtro prodotti
             taxons: Filtro Taxons
@@ -174,16 +174,16 @@ sylius:
             header: file system
             cache:
                 header: cache
-                help: 'Per impostare le autorizzazioni eseguire: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%'
+                help: "Per impostare le autorizzazioni eseguire: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%"
             exists: esiste
             logs:
                 header: logs
-                help: 'Per impostare le autorizzazioni eseguire: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%'
+                help: "Per impostare le autorizzazioni eseguire: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%"
             not_exists: non esiste
             not_writable: non scrivibile
             parameters:
                 header: parameters.yml
-                help: 'Per impostare le autorizzazioni eseguire: sudo chmod a+w %path%'
+                help: "Per impostare le autorizzazioni eseguire: sudo chmod a+w %path%"
             vendors: fornitori
             writable: scrivibile
         settings:

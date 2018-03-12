@@ -45,7 +45,7 @@ sylius:
             file: Imagem
         locale:
             code: Código
-            enabled: Ativado
+            enabled: Habilitado
         order_filter:
             created_at_from: Criado após
             created_at_to: Criado antes
@@ -65,7 +65,7 @@ sylius:
             variant_selection_method: Método de seleção da variação
             main_taxon: Táxon principal
             channels: Canais
-            enabled: Ativado
+            enabled: Habilitado
         product_filter:
             name: Nome
             code: Código
@@ -95,7 +95,7 @@ sylius:
         user:
             billing_address: Endereço de cobrança
             different_billing_address: Utilizar um endereço diferente para cobrança?
-            enabled: Ativado
+            enabled: Habilitado
             first_name: Nome
             groups: Grupos
             roles: Papéis
@@ -143,8 +143,8 @@ sylius:
             position: Posição
         zone:
             scopes:
-                shipping: Entrega
-                tax: Taxa
+                shipping: Expedição
+                tax: Imposto
     installer:
         extensions:
             header: extensões
@@ -174,16 +174,16 @@ sylius:
             header: sistema de arquivos
             cache:
                 header: cache
-                help: 'Para configurar as permissões execute: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%'
+                help: "Para configurar as permissões execute: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%"
             exists: existe
             logs:
                 header: logs
-                help: 'Para configurar as permissões execute: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%'
+                help: "Para configurar as permissões execute: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%"
             not_exists: Não existe
             not_writable: não gravável
             parameters:
                 header: parameters.yml
-                help: 'Para configurar as permissões execute: sudo chmod + w %path%'
+                help: "Para configurar as permissões execute: sudo chmod + w %path%"
             vendors: fornecedores
             writable: gravável
         settings:

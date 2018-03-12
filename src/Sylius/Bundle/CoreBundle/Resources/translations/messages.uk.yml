@@ -45,7 +45,7 @@ sylius:
             file: Зображення
         locale:
             code: Код
-            enabled: Увімкнено
+            enabled: Ввімкнено
         order_filter:
             created_at_from: Створені після
             created_at_to: Створений перед
@@ -57,7 +57,7 @@ sylius:
         page:
             body: Тіло
             id: ID
-            title: Назва
+            title: Заголовок
         product:
             images: Зображення
             restricted_zone: Заборонена зона
@@ -65,9 +65,9 @@ sylius:
             variant_selection_method: Метод вибору варіанту
             main_taxon: Основний таксон
             channels: Канали
-            enabled: Увімкнено
+            enabled: Ввімкнено
         product_filter:
-            name: Ім’я
+            name: Назва
             code: Код
         product_variant:
             tax_category: Категорія податку
@@ -94,8 +94,8 @@ sylius:
             file: Вибрати зображення
         user:
             billing_address: Адреса для рахунків
-            different_billing_address: Використати іншу адресу для рахунків?
-            enabled: Увімкнено
+            different_billing_address: Використати іншу адресу для виставлення рахунків?
+            enabled: Ввімкнено
             first_name: Iм'я
             groups: Групи
             roles: Ролі
@@ -174,16 +174,16 @@ sylius:
             header: файлова система
             cache:
                 header: кеш
-                help: 'Щоб встановити дозволи, запустіть: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%'
+                help: "Щоб встановити дозволи, запустіть: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%"
             exists: існує
             logs:
                 header: журнали
-                help: 'Щоб встановити дозволи, запустіть: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%'
+                help: "Щоб встановити дозволи, запустіть: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%"
             not_exists: не існує
             not_writable: відсутня можливість запису
             parameters:
                 header: parameters.yml
-                help: 'Щоб встановити дозволи, запустіть: sudo chmod a+w %path%'
+                help: "Щоб встановити дозволи, запустіть: sudo chmod a+w %path%"
             vendors: постачальники
             writable: наявна можливість запису
         settings:

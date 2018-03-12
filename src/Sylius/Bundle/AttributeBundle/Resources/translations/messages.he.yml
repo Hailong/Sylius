@@ -4,6 +4,11 @@
 sylius:
     form:
         attribute:
+            add: הוסף
+            name: שם
+            translations: תרגומים
             type: סוג
         attribute_type:
+            date: תאריך
             select: בחירה
+            text: טקסט

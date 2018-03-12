@@ -45,7 +45,7 @@ sylius:
             file: Afbeelding
         locale:
             code: Code
-            enabled: Toegestaan
+            enabled: Ingeschakeld
         order_filter:
             created_at_from: Gemaakt na
             created_at_to: Gemaakt voor
@@ -65,7 +65,7 @@ sylius:
             variant_selection_method: Variant selectie methode
             main_taxon: Hoofdcategorie
             channels: Kanalen
-            enabled: Toegestaan
+            enabled: Ingeschakeld
         product_filter:
             name: Naam
             code: Code
@@ -94,8 +94,8 @@ sylius:
             file: Selecteer afbeelding
         user:
             billing_address: Factuuradres
-            different_billing_address: Gebruik een ander adres voor facturering?
-            enabled: Actief
+            different_billing_address: Gebruik een ander factuuradres?
+            enabled: Ingeschakeld
             first_name: Voornaam
             groups: Groepen
             roles: Rollen
@@ -136,7 +136,7 @@ sylius:
                 products: Producten
             total_of_items_from_taxon:
                 taxon: Taxon
-                amount: Hoeveelheid
+                amount: Bedrag
         payment_method:
             channels: Kanalen
         product_attribute:
@@ -174,16 +174,16 @@ sylius:
             header: bestandssysteem
             cache:
                 header: cache
-                help: 'Machtigingen uitvoeren instellen: sudo setfacl -R -m u:www-gegevens: rwX -m u: ''whoami'': rwX %path% && sudo setfacl -dR -m u:www-gegevens: rwx -m u: ''whoami'': rwx %path%'
+                help: "Machtigingen uitvoeren instellen: sudo setfacl -R -m u:www-gegevens: rwX -m u: 'whoami': rwX %path% && sudo setfacl -dR -m u:www-gegevens: rwx -m u: 'whoami': rwx %path%"
             exists: bestaat
             logs:
                 header: logs
-                help: 'Machtigingen uitvoeren instellen: sudo setfacl -R -m u:www-gegevens: rwX -m u: ''whoami'': rwX %path% && sudo setfacl -dR -m u:www-gegevens: rwx -m u: ''whoami'': rwx %path%'
+                help: "Machtigingen uitvoeren instellen: sudo setfacl -R -m u:www-gegevens: rwX -m u: 'whoami': rwX %path% && sudo setfacl -dR -m u:www-gegevens: rwx -m u: 'whoami': rwx %path%"
             not_exists: niet bestaand
             not_writable: niet schrijfbaar
             parameters:
                 header: parameters.yml
-                help: 'Machtigingen uitvoeren instellen: sudo chmod a + w %path%'
+                help: "Machtigingen uitvoeren instellen: sudo chmod a + w %path%"
             vendors: vendors
             writable: schrijfbaar
         settings:
