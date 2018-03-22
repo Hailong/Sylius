@@ -35,4 +35,12 @@ parameters:
 
     static_cdn: ~
 
+    orinoco_payment_gateway_wechat_mini_program_abang_app_id: ~
+    orinoco_payment_gateway_wechat_mini_program_abang_secret: ~
+    orinoco_payment_gateway_wechat_payment_abang_app_id: ~
+    orinoco_payment_gateway_wechat_payment_abang_mch_id: ~
+    orinoco_payment_gateway_wechat_payment_abang_key: ~
+    orinoco_payment_gateway_wechat_payment_abang_cert_path: ~
+    orinoco_payment_gateway_wechat_payment_abang_key_path: ~
+
     secret: EDITME

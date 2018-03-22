@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="orinoco_payment_gateway.wechat.mini_program.abang" class="Orinoco\Payment\GatewayBundle\Wechat\MiniProgram">
+            <argument>%orinoco_payment_gateway_wechat_mini_program_abang_app_id%</argument>
+            <argument>%orinoco_payment_gateway_wechat_mini_program_abang_secret%</argument>
+            <argument>%kernel.root_dir%/../var/logs/orinoco_payment_gateway_wechat_mini_program_abang.log</argument>
+        </service>
+        <service id="orinoco_payment_gateway.wechat.payment.abang" class="Orinoco\Payment\GatewayBundle\Wechat\Payment">
+            <argument>%orinoco_payment_gateway_wechat_payment_abang_app_id%</argument>
+            <argument>%orinoco_payment_gateway_wechat_payment_abang_mch_id%</argument>
+            <argument>%orinoco_payment_gateway_wechat_payment_abang_key%</argument>
+            <argument>%orinoco_payment_gateway_wechat_payment_abang_cert_path%</argument>
+            <argument>%orinoco_payment_gateway_wechat_payment_abang_key_path%</argument>
+        </service>
+    </services>
+</container>

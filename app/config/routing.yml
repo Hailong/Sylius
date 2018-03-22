@@ -49,3 +49,7 @@ zshwag_alipay:
 zshwag_static_page:
     resource: "@ZshwagStaticPageBundle/Resources/config/routing.xml"
     prefix:   /page
+
+orinoco_payment_gateway:
+    resource: "@OrinocoPaymentGatewayBundle/Resources/config/routing.xml"
+    prefix:   /gateway

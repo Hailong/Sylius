@@ -185,7 +185,8 @@
             "Zshwag\\AlipayBundle\\": "src/Zshwag/AlipayBundle",
             "Payum\\Alipay\\Wap\\": "src/Orinoco/Alipay/Wap",
             "Nvidia\\WeChat\\JSSDKBundle\\": "src/spring/WeChat/JSSDKBundle",
-            "Zshwag\\StaticPageBundle\\": "src/Zshwag/staticpagebundle"
+            "Zshwag\\StaticPageBundle\\": "src/Zshwag/staticpagebundle",
+            "Orinoco\\Payment\\GatewayBundle\\": "src/Orinoco/Payment/GatewayBundle"
         },
         "classmap": [
             "src/Orinoco/Alipay/AlipaySDK/alipay-sdk-PHP-20180104135052/aop/",

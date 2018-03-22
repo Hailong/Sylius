@@ -40,6 +40,7 @@ class AppKernel extends Kernel
             new Orinoco\WechatBundle\OrinocoWechatBundle(),
             new Zshwag\AlipayBundle\ZshwagAlipayBundle(),
             new Zshwag\StaticPageBundle\ZshwagStaticPageBundle(),
+            new Orinoco\Payment\GatewayBundle\OrinocoPaymentGatewayBundle(),
         ];
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
